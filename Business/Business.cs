@@ -6,7 +6,7 @@ namespace Business
     /// <summary>
     /// Business logic class
     /// </summary>
-    public class ExpenseTrackerBusiness
+    public class Business
     {
 
     }
