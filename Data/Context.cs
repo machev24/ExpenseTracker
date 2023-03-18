@@ -15,7 +15,7 @@ namespace Data
         /// <summary>
         /// Database Connection String
         /// </summary>
-        private const string connectionString = "";
+        private const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ExpenseTracker;Integrated Security=True;";
 
         /// <summary>
         /// Transaction Table from Database
