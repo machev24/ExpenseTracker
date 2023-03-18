@@ -34,7 +34,7 @@ namespace Data.Models
         /// <summary>
         /// Transaction note
         /// </summary>
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Transaction date
