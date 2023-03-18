@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 /// <summary>
-/// Data Models Transaction namespace
+/// Expense Tracker Data Models namespace
 /// </summary>
 namespace Data.Models
 {
