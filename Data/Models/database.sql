@@ -1,17 +1,17 @@
 ﻿USE [ExpenseTracker];
 
 -- Create table
-CREATE TABLE [Category] 
+CREATE TABLE [Categories] 
 (
-	[id] INT, 
+	[id] INT IDENTITY PRIMARY KEY NOT NULL, 
 	[title] VARCHAR(50), 
 	[icon] VARCHAR(50),
 	[type] VARCHAR(50)
 );
 
-CREATE TABLE [Transaction] 
+CREATE TABLE [Transactions] 
 (
-	[id] INT, 
+	[id] INT IDENTITY PRIMARY KEY NOT NULL, 
 	[category] INT, 
 	[amount] DECIMAL,
 	[note]VARCHAR(75),

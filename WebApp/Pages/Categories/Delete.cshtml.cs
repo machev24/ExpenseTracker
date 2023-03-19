@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Cats
+namespace WebApp.Pages.Categories
 {
     public class DeleteModel : PageModel
     {

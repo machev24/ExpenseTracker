@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Trans
+namespace WebApp.Pages.Transactions
 {
     public class EditModel : PageModel
     {
