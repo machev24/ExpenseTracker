@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\Business.csproj": {
+    "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\obj\\",
+        "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\mache\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mache\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj"
+              "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj"
               }
             }
           }
@@ -73,25 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj": {
+    "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\obj\\",
+        "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\mache\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mache\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,25 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\mache\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mache\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,11 +162,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Business\\Business.csproj"
+              "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Business\\Business.csproj"
               },
-              "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\ACER\\OneDrive\\Работен плот\\2\\Data\\Data.csproj"
+              "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\mache\\OneDrive\\Desktop\\ExpenseTracker\\Data\\Data.csproj"
               }
             }
           }
@@ -221,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

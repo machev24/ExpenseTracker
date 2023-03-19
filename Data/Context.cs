@@ -1,6 +1,5 @@
 ﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Transactions;
 
 /// <summary>
 /// Expense Tracker Data namespace

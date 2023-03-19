@@ -8,7 +8,7 @@ namespace Data.Models
     /// <summary>
     /// Data Models Transaction Class
     /// </summary>
-    public class Transcaction
+    public class Transaction
     {
         /// <summary>
         /// Transaction ID
