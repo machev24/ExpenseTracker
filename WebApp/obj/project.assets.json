@@ -3259,7 +3259,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Business >= 1.0.0",
-      "Data >= 1.0.0"
+      "Data >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 7.0.4",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.4"
     ]
   },
   "packageFolders": {
@@ -3307,6 +3309,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.4, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[7.0.4, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

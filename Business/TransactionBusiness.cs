@@ -4,9 +4,9 @@
 namespace Business
 {
     /// <summary>
-    /// Business logic class
+    /// Transaction Business logic class
     /// </summary>
-    public class Business
+    public class TransactionBusiness
     {
 
     }
