@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Category\" />
+    <Folder Include="Pages\Transactions\" />
   </ItemGroup>
 
 </Project>

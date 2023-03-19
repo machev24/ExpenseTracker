@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Transaction
+namespace WebApp.Pages.Categories
 {
     public class DetailsModel : PageModel
     {
@@ -19,23 +19,23 @@ namespace WebApp.Pages.Transaction
             _context = context;
         }
 
-      public Transaction Transaction { get; set; } = default!; 
+      public Category Category { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Transactions == null)
+            if (id == null || _context.Categories == null)
             {
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions.FirstOrDefaultAsync(m => m.TransactionId == id);
-            if (transaction == null)
+            var category = await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
+            if (category == null)
             {
                 return NotFound();
             }
             else 
             {
-                Transaction = transaction;
+                Category = category;
             }
             return Page();
         }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Transaction
+namespace WebApp.Pages.Categories
 {
     public class IndexModel : PageModel
     {
@@ -19,14 +19,13 @@ namespace WebApp.Pages.Transaction
             _context = context;
         }
 
-        public IList<Transaction> Transaction { get;set; } = default!;
+        public IList<Category> Category { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Transactions != null)
+            if (_context.Categories != null)
             {
-                Transaction = await _context.Transactions
-                .Include(t => t.Category).ToListAsync();
+                Category = await _context.Categories.ToListAsync();
             }
         }
     }

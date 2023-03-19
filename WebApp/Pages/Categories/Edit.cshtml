@@ -1,0 +1,45 @@
+﻿@page
+@model WebApp.Pages.Categories.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Category.CategoryId" />
+            <div class="form-group">
+                <label asp-for="Category.Title" class="control-label"></label>
+                <input asp-for="Category.Title" class="form-control" />
+                <span asp-validation-for="Category.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category.Icon" class="control-label"></label>
+                <input asp-for="Category.Icon" class="form-control" />
+                <span asp-validation-for="Category.Icon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category.Type" class="control-label"></label>
+                <input asp-for="Category.Type" class="form-control" />
+                <span asp-validation-for="Category.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Transaction
+namespace WebApp.Pages.Categories
 {
     public class DeleteModel : PageModel
     {
@@ -20,40 +20,40 @@ namespace WebApp.Pages.Transaction
         }
 
         [BindProperty]
-      public Transaction Transaction { get; set; } = default!;
+      public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Transactions == null)
+            if (id == null || _context.Categories == null)
             {
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions.FirstOrDefaultAsync(m => m.TransactionId == id);
+            var category = await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
 
-            if (transaction == null)
+            if (category == null)
             {
                 return NotFound();
             }
             else 
             {
-                Transaction = transaction;
+                Category = category;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Transactions == null)
+            if (id == null || _context.Categories == null)
             {
                 return NotFound();
             }
-            var transaction = await _context.Transactions.FindAsync(id);
+            var category = await _context.Categories.FindAsync(id);
 
-            if (transaction != null)
+            if (category != null)
             {
-                Transaction = transaction;
-                _context.Transactions.Remove(Transaction);
+                Category = category;
+                _context.Categories.Remove(Category);
                 await _context.SaveChangesAsync();
             }
 
