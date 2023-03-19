@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Transactions
+namespace WebApp.Pages.Cats
 {
     public class EditModel : PageModel
     {
@@ -21,22 +21,21 @@ namespace WebApp.Pages.Transactions
         }
 
         [BindProperty]
-        public Transaction Transaction { get; set; } = default!;
+        public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Transactions == null)
+            if (id == null || _context.Categories == null)
             {
                 return NotFound();
             }
 
-            var transaction =  await _context.Transactions.FirstOrDefaultAsync(m => m.TransactionId == id);
-            if (transaction == null)
+            var category =  await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
+            if (category == null)
             {
                 return NotFound();
             }
-            Transaction = transaction;
-           ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Icon");
+            Category = category;
             return Page();
         }
 
@@ -49,7 +48,7 @@ namespace WebApp.Pages.Transactions
                 return Page();
             }
 
-            _context.Attach(Transaction).State = EntityState.Modified;
+            _context.Attach(Category).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +56,7 @@ namespace WebApp.Pages.Transactions
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TransactionExists(Transaction.TransactionId))
+                if (!CategoryExists(Category.CategoryId))
                 {
                     return NotFound();
                 }
@@ -70,9 +69,9 @@ namespace WebApp.Pages.Transactions
             return RedirectToPage("./Index");
         }
 
-        private bool TransactionExists(int id)
+        private bool CategoryExists(int id)
         {
-          return (_context.Transactions?.Any(e => e.TransactionId == id)).GetValueOrDefault();
+          return (_context.Categories?.Any(e => e.CategoryId == id)).GetValueOrDefault();
         }
     }
 }

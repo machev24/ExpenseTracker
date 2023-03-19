@@ -8,19 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Categories
+namespace WebApp.Pages.Cats
 {
-    public class DeleteModel : PageModel
+    public class DetailsModel : PageModel
     {
         private readonly Data.Context _context;
 
-        public DeleteModel(Data.Context context)
+        public DetailsModel(Data.Context context)
         {
             _context = context;
         }
 
-        [BindProperty]
-      public Category Category { get; set; } = default!;
+      public Category Category { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,7 +29,6 @@ namespace WebApp.Pages.Categories
             }
 
             var category = await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
-
             if (category == null)
             {
                 return NotFound();
@@ -40,24 +38,6 @@ namespace WebApp.Pages.Categories
                 Category = category;
             }
             return Page();
-        }
-
-        public async Task<IActionResult> OnPostAsync(int? id)
-        {
-            if (id == null || _context.Categories == null)
-            {
-                return NotFound();
-            }
-            var category = await _context.Categories.FindAsync(id);
-
-            if (category != null)
-            {
-                Category = category;
-                _context.Categories.Remove(Category);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
         }
     }
 }

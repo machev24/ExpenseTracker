@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Categories
+namespace WebApp.Pages.Trans
 {
     public class CreateModel : PageModel
     {
@@ -21,22 +21,23 @@ namespace WebApp.Pages.Categories
 
         public IActionResult OnGet()
         {
+        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Icon");
             return Page();
         }
 
         [BindProperty]
-        public Category Category { get; set; } = default!;
+        public Transaction Transaction { get; set; } = default!;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Categories == null || Category == null)
+          if (!ModelState.IsValid || _context.Transactions == null || Transaction == null)
             {
                 return Page();
             }
 
-            _context.Categories.Add(Category);
+            _context.Transactions.Add(Transaction);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

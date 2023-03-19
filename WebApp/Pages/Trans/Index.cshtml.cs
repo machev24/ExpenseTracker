@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Models;
 
-namespace WebApp.Pages.Transactions
+namespace WebApp.Pages.Trans
 {
     public class IndexModel : PageModel
     {
