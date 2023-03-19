@@ -1,6 +1,5 @@
 ﻿using Data;
 using Data.Models;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 
 /// <summary>
 /// Expense Tracker Business namespace
