@@ -28,7 +28,7 @@ namespace WebApp.Pages.Trans
                 return NotFound();
             }
 
-            var transaction = await _context.Transactions.FirstOrDefaultAsync(m => m.TransactionId == id);
+            var transaction = await _context.Transactions.FirstOrDefaultAsync(m => m.id == id);
             if (transaction == null)
             {
                 return NotFound();

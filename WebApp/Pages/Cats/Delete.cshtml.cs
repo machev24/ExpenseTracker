@@ -29,7 +29,7 @@ namespace WebApp.Pages.Cats
                 return NotFound();
             }
 
-            var category = await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category = await _context.Categories.FirstOrDefaultAsync(m => m.id == id);
 
             if (category == null)
             {

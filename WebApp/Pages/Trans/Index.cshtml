@@ -14,16 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Transaction[0].Category)
+                @Html.DisplayNameFor(model => model.Transaction[0].category)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Transaction[0].Amount)
+                @Html.DisplayNameFor(model => model.Transaction[0].amount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Transaction[0].Note)
+                @Html.DisplayNameFor(model => model.Transaction[0].note)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Transaction[0].Date)
+                @Html.DisplayNameFor(model => model.Transaction[0].date)
             </th>
             <th></th>
         </tr>
@@ -32,21 +32,21 @@
 @foreach (var item in Model.Transaction) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Category.Icon)
+                @Html.DisplayFor(modelItem => item.category)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Amount)
+                @Html.DisplayFor(modelItem => item.amount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Note)
+                @Html.DisplayFor(modelItem => item.note)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Date)
+                @Html.DisplayFor(modelItem => item.date)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.TransactionId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.TransactionId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.TransactionId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
             </td>
         </tr>
 }

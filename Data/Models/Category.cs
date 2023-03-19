@@ -14,21 +14,21 @@ namespace Data.Models
         /// Category ID
         /// </summary>
         [Key]
-        public int CategoryId { get; set; }
+        public int id { get; set; }
 
         /// <summary>
         /// Category Title
         /// </summary>
-        public string Title { get; set; }
+        public string title { get; set; }
 
         /// <summary>
         /// Category Icon
         /// </summary>
-        public string Icon { get; set; }
+        public string icon { get; set; }
 
         /// <summary>
         /// Category Type
         /// </summary>
-        public string Type { get; set; }
+        public string type { get; set; }
     }
 }

@@ -25,8 +25,7 @@ namespace WebApp.Pages.Trans
         {
             if (_context.Transactions != null)
             {
-                Transaction = await _context.Transactions
-                .Include(t => t.Category).ToListAsync();
+                Transaction = await _context.Transactions.ToListAsync();
             }
         }
     }

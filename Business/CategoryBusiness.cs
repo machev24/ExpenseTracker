@@ -61,7 +61,7 @@ namespace Business
         {
             using (categoryContext = new Context())
             {
-                var oldCategories = categoryContext.Categories.Find(category.CategoryId);
+                var oldCategories = categoryContext.Categories.Find(category.id);
                 if (oldCategories != null)
                 {
                     categoryContext.Entry(oldCategories).CurrentValues.SetValues(category);

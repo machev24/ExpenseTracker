@@ -21,7 +21,6 @@ namespace WebApp.Pages.Trans
 
         public IActionResult OnGet()
         {
-        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Icon");
             return Page();
         }
 

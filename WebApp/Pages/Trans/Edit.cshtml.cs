@@ -30,13 +30,12 @@ namespace WebApp.Pages.Trans
                 return NotFound();
             }
 
-            var transaction =  await _context.Transactions.FirstOrDefaultAsync(m => m.TransactionId == id);
+            var transaction =  await _context.Transactions.FirstOrDefaultAsync(m => m.id == id);
             if (transaction == null)
             {
                 return NotFound();
             }
             Transaction = transaction;
-           ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Icon");
             return Page();
         }
 
@@ -57,7 +56,7 @@ namespace WebApp.Pages.Trans
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TransactionExists(Transaction.TransactionId))
+                if (!TransactionExists(Transaction.id))
                 {
                     return NotFound();
                 }
@@ -72,7 +71,7 @@ namespace WebApp.Pages.Trans
 
         private bool TransactionExists(int id)
         {
-          return (_context.Transactions?.Any(e => e.TransactionId == id)).GetValueOrDefault();
+          return (_context.Transactions?.Any(e => e.id == id)).GetValueOrDefault();
         }
     }
 }

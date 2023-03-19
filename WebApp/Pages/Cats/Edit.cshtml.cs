@@ -30,7 +30,7 @@ namespace WebApp.Pages.Cats
                 return NotFound();
             }
 
-            var category =  await _context.Categories.FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category =  await _context.Categories.FirstOrDefaultAsync(m => m.id == id);
             if (category == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace WebApp.Pages.Cats
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CategoryExists(Category.CategoryId))
+                if (!CategoryExists(Category.id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace WebApp.Pages.Cats
 
         private bool CategoryExists(int id)
         {
-          return (_context.Categories?.Any(e => e.CategoryId == id)).GetValueOrDefault();
+          return (_context.Categories?.Any(e => e.id == id)).GetValueOrDefault();
         }
     }
 }

@@ -14,31 +14,31 @@ namespace Data.Models
         /// Transaction ID
         /// </summary>
         [Key]
-        public int TransactionId { get; set; }
+        public int id { get; set; }
 
         /// <summary>
         /// Category ID
         /// </summary>
-        public int CategoryId { get; set; }
+        public int category { get; set; }
 
         /// <summary>
         /// Category from Data.Models.Category
         /// </summary>
-        public Category Category { get; set; }
+        // public Category Category { get; set; }
 
         /// <summary>
         /// Transaction amount
         /// </summary>
-        public decimal Amount { get; set; }
+        public decimal amount { get; set; }
 
         /// <summary>
         /// Transaction note
         /// </summary>
-        public string? Note { get; set; }
+        public string? note { get; set; }
 
         /// <summary>
         /// Transaction date
         /// </summary>
-        public DateTime Date { get; set; } = DateTime.Now;
+        public DateTime date { get; set; } = DateTime.Now;
     }
 }

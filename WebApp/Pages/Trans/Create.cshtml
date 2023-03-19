@@ -14,23 +14,24 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Transaction.CategoryId" class="control-label"></label>
-                <select asp-for="Transaction.CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+                <label asp-for="Transaction.category" class="control-label"></label>
+                <input asp-for="Transaction.category" class="form-control" />
+                <span asp-validation-for="Transaction.category" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Transaction.Amount" class="control-label"></label>
-                <input asp-for="Transaction.Amount" class="form-control" />
-                <span asp-validation-for="Transaction.Amount" class="text-danger"></span>
+                <label asp-for="Transaction.amount" class="control-label"></label>
+                <input asp-for="Transaction.amount" class="form-control" />
+                <span asp-validation-for="Transaction.amount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Transaction.Note" class="control-label"></label>
-                <input asp-for="Transaction.Note" class="form-control" />
-                <span asp-validation-for="Transaction.Note" class="text-danger"></span>
+                <label asp-for="Transaction.note" class="control-label"></label>
+                <input asp-for="Transaction.note" class="form-control" />
+                <span asp-validation-for="Transaction.note" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Transaction.Date" class="control-label"></label>
-                <input asp-for="Transaction.Date" class="form-control" />
-                <span asp-validation-for="Transaction.Date" class="text-danger"></span>
+                <label asp-for="Transaction.date" class="control-label"></label>
+                <input asp-for="Transaction.date" class="form-control" />
+                <span asp-validation-for="Transaction.date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
