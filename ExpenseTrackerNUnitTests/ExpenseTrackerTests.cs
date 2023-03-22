@@ -5,17 +5,17 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Tests
+namespace ExpenseTrackerNUnitTests
 {
     public class TransactionBusinessTests
     {
-        private TransactionBusiness _transactionBusiness;
+        private TransactionBusiness transactionBusiness;
 
-        
+
         [SetUp]
         public void Setup()
         {
-            _transactionBusiness = new TransactionBusiness();
+            transactionBusiness = new TransactionBusiness();
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace Tests
             var expectedCount = 3;
 
             //Act
-            var result = _transactionBusiness.GetAll();
+            var result = transactionBusiness.GetAll();
 
             //Assert
             Assert.IsNotNull(result);
@@ -47,7 +47,7 @@ namespace Tests
             };
 
             //Act
-            var result = _transactionBusiness.Get(1);
+            var result = transactionBusiness.Get(1);
 
             //Assert
             Assert.IsNotNull(result);
@@ -71,9 +71,9 @@ namespace Tests
             };
 
             //Act
-            _transactionBusiness.Add(transaction);
+            transactionBusiness.Add(transaction);
 
-            var result = _transactionBusiness.Get(4);
+            var result = transactionBusiness.Get(4);
 
             //Assert
             Assert.IsNotNull(result);
@@ -97,9 +97,9 @@ namespace Tests
             };
 
             //Act
-            _transactionBusiness.Update(transaction);
+            transactionBusiness.Update(transaction);
 
-            var result = _transactionBusiness.Get(2);
+            var result = transactionBusiness.Get(2);
 
             //Assert
             Assert.IsNotNull(result);
@@ -114,18 +114,18 @@ namespace Tests
         public void Delete_DeletesTransaction()
         {
             //Arrange
-            var transactionCountBeforeDelete = _transactionBusiness.GetAll().Count;
+            var transactionCountBeforeDelete = transactionBusiness.GetAll().Count;
 
             //Act
-            _transactionBusiness.Delete(2);
+            transactionBusiness.Delete(2);
 
-            var result = _transactionBusiness.GetAll();
+            var result = transactionBusiness.GetAll();
             var transactionCountAfterDelete = result.Count;
             var deletedTransaction = result.FirstOrDefault(x => x.id == 2);
 
             //Assert
             Assert.IsNotNull(deletedTransaction);
-            Assert.AreEqual(transactionCountBeforeDelete - 1, transactionCountAfterDelete);
+            Assert.That(transactionCountAfterDelete, Is.EqualTo(transactionCountBeforeDelete - 1));
         }
     }
 }
