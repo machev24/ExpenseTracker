@@ -5,38 +5,43 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<br />
+<br />
 
-<h4>Category</h4>
-<hr />
+<h1 class="one">Create category</h1>
+
+<br />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Category.title" class="control-label"></label>
-                <input asp-for="Category.title" class="form-control" />
-                <span asp-validation-for="Category.title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Category.icon" class="control-label"></label>
-                <input asp-for="Category.icon" class="form-control" />
-                <span asp-validation-for="Category.icon" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Category.type" class="control-label"></label>
-                <input asp-for="Category.type" class="form-control" />
+            <div class="form-group2">
+                <input asp-for="Category.type" type="radio" value="Expense" id="e" />
+                <label asp-for="Category.type" for="e" class="c">Expense</label>
+                <input asp-for="Category.type" type="radio" value="Income" id="i" />
+                <label asp-for="Category.type" for="i" class="c">Income</label>
                 <span asp-validation-for="Category.type" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input asp-for="Category.title" class="form-control" placeholder="Title" />
+                <span asp-validation-for="Category.title" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input asp-for="Category.icon" class="form-control" placeholder="Icon" />
+                <span asp-validation-for="Category.icon" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group1">
+                <input type="submit" value="Create" class="btn" />
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
+<br />
+<div class="hp">
+    <a class="hp1" asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

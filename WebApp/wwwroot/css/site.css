@@ -15,4 +15,103 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #28282B;
+  color: white;
 }
+
+.btn:hover {
+    background-color: white;
+    color: #28282B;
+    border-color: #28282B;
+}
+
+.btn {
+    background-color: #28282B;
+    color: white;
+    border-color: white;
+}
+
+.navbar{
+    background-color: #28282B;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.table{
+    color: white;
+}
+
+.one{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.hp {
+    text-align: center;
+}
+
+.hp1{
+    color: white;
+}
+
+    .hp1:hover {
+        color: #b4bdc4;
+    }
+
+.form-group1 {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group2 {
+    display: flex;
+    justify-content: center;
+
+    width: fit-content;
+    border: 1px solid #666;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    margin-left: 83px;
+}
+
+#e{
+    display: none;
+}
+
+    #e:checked + .c {
+        background: #b4bdc4;
+    }
+
+#i{
+    display: none;
+}
+
+#i:checked + .c {
+    background: #b4bdc4;
+}
+
+.c {
+    font-family: sans-serif;
+    padding: 10px 16px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.c:last-of-type{
+    border-right: 0;
+}
+
+    .c:hover {
+        background: #eee;
+        color: #28282B;
+    }
