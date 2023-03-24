@@ -41,5 +41,22 @@ namespace Tests
             // Assert
             Assert.IsNull(actualTransaction);
         }
+        [Test]
+        public void Add_AddsTransactionToDatabase()
+        {
+            // Arrange
+            var transaction = new Transaction { Note = "Test Transaction", Amount = 100 };
+
+            // Act
+            transactionBusiness.Add(transaction);
+
+            // Assert
+            using (var context = new Context())
+            {
+                var addedTransaction = context.Transactions.FirstOrDefault(t => t.Note == "Test Transaction");
+                Assert.IsNotNull(addedTransaction);
+                Assert.AreEqual(transaction.Amount, addedTransaction.Amount);
+            }
+        }
     }
 }
