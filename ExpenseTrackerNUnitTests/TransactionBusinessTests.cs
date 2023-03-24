@@ -94,6 +94,17 @@ namespace Tests
                 Assert.IsNull(deletedTransaction, "Transaction was not deleted from database");
             }
         }
+        [Test]
+        public void Delete_ThrowsExceptionIfTransactionNotFound()
+        {
+            // Arrange
+            var invalidId = -1;
+
+            // Act & Assert
+            Assert.Throws<Exception>(() => transactionBusiness.Delete(invalidId),
+                "Delete should throw an exception if transaction is not found in database");
+
+        }
 
     }
 }
