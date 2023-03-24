@@ -58,5 +58,21 @@ namespace Tests
                 Assert.AreEqual(transaction.Amount, addedTransaction.Amount);
             }
         }
+        [Test]
+        public void Update_WithInvalidTransaction_ThrowsException()
+        {
+            // Arrange
+            Transaction invalidTransaction = new Transaction
+            {
+                // create a new transaction object with no corresponding entry in the database
+                Id = -1,
+                Date = DateTime.Today,
+                Note = "Invalid Transaction",
+                Amount = 25.00m
+            };
+
+            // Act and Assert
+            Assert.Throws<Exception>(() => transactionBusiness.Update(invalidTransaction));
+        }
     }
 }
