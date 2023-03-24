@@ -14,13 +14,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].title)
+                @Html.DisplayNameFor(model => model.Category[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].icon)
+                @Html.DisplayNameFor(model => model.Category[0].Icon)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category[0].type)
+                @Html.DisplayNameFor(model => model.Category[0].Type)
             </th>
             <th></th>
         </tr>
@@ -29,18 +29,18 @@
 @foreach (var item in Model.Category) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.title)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.icon)
+                @Html.DisplayFor(modelItem => item.Icon)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.type)
+                @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                    <a class="hp1" asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
-                    <a class="hp1" asp-page="./Details" asp-route-id="@item.id">Details</a> |
-                    <a class="hp1" asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                    <a class="hp1" asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="hp1" asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="hp1" asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

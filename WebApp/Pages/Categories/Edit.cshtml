@@ -5,38 +5,44 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<br />
+<br />
 
-<h4>Category</h4>
-<hr />
+<h1 class="one">Edit category</h1>
+
+<br />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Category.id" />
-            <div class="form-group">
-                <label asp-for="Category.title" class="control-label"></label>
-                <input asp-for="Category.title" class="form-control" />
-                <span asp-validation-for="Category.title" class="text-danger"></span>
+            <input type="hidden" asp-for="Category.Id" />
+            <div class="form-group2">
+                <input asp-for="Category.Type" type="radio" value="Expense" id="e" />
+                <label asp-for="Category.Type" for="e" class="c">Expense</label>
+                <input asp-for="Category.Type" type="radio" value="Income" id="i" />
+                <label asp-for="Category.Type" for="i" class="c">Income</label>
+                <span asp-validation-for="Category.Type" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Category.icon" class="control-label"></label>
-                <input asp-for="Category.icon" class="form-control" />
-                <span asp-validation-for="Category.icon" class="text-danger"></span>
+                <input asp-for="Category.Title" class="form-control" placeholder="Title" />
+                <span asp-validation-for="Category.Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Category.type" class="control-label"></label>
-                <input asp-for="Category.type" class="form-control" />
-                <span asp-validation-for="Category.type" class="text-danger"></span>
+                <input asp-for="Category.Icon" class="form-control" placeholder="Icon" />
+                <span asp-validation-for="Category.Icon" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <br />
+            <div class="form-group1">
+                <input type="submit" value="Save" class="btn" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+<br />
+<div class="hp">
     <a class="hp1" asp-page="./Index">Back to List</a>
 </div>
 

@@ -63,7 +63,7 @@ namespace Business
         {
             using (transactionContext = new Context())
             {
-                var oldTransaction = transactionContext.Transactions.Find(transaction.id);
+                var oldTransaction = transactionContext.Transactions.Find(transaction.Id);
 
                 if (oldTransaction != null)
                 {

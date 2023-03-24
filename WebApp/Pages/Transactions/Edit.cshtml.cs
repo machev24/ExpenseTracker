@@ -30,7 +30,7 @@ namespace WebApp.Pages.Transactions
                 return NotFound();
             }
 
-            var transaction =  await _context.Transactions.FirstOrDefaultAsync(m => m.id == id);
+            var transaction =  await _context.Transactions.FirstOrDefaultAsync(m => m.Id == id);
             if (transaction == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace WebApp.Pages.Transactions
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TransactionExists(Transaction.id))
+                if (!TransactionExists(Transaction.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace WebApp.Pages.Transactions
 
         private bool TransactionExists(int id)
         {
-          return (_context.Transactions?.Any(e => e.id == id)).GetValueOrDefault();
+          return (_context.Transactions?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

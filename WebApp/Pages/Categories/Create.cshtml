@@ -16,21 +16,21 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group2">
-                <input asp-for="Category.type" type="radio" value="Expense" id="e" />
-                <label asp-for="Category.type" for="e" class="c">Expense</label>
-                <input asp-for="Category.type" type="radio" value="Income" id="i" />
-                <label asp-for="Category.type" for="i" class="c">Income</label>
-                <span asp-validation-for="Category.type" class="text-danger"></span>
+                <input asp-for="Category.Type" type="radio" value="Expense" id="e" />
+                <label asp-for="Category.Type" for="e" class="c">Expense</label>
+                <input asp-for="Category.Type" type="radio" value="Income" id="i" />
+                <label asp-for="Category.Type" for="i" class="c">Income</label>
+                <span asp-validation-for="Category.Type" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <input asp-for="Category.title" class="form-control" placeholder="Title" />
-                <span asp-validation-for="Category.title" class="text-danger"></span>
+                <input asp-for="Category.Title" class="form-control" placeholder="Title" />
+                <span asp-validation-for="Category.Title" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <input asp-for="Category.icon" class="form-control" placeholder="Icon" />
-                <span asp-validation-for="Category.icon" class="text-danger"></span>
+                <input asp-for="Category.Icon" class="form-control" placeholder="Icon" />
+                <span asp-validation-for="Category.Icon" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group1">
