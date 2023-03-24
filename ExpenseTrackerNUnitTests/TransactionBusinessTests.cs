@@ -74,5 +74,26 @@ namespace Tests
             // Act and Assert
             Assert.Throws<Exception>(() => transactionBusiness.Update(invalidTransaction));
         }
+
+        [Test]
+        public void Delete_DeletesTransactionFromDatabase()
+        {
+            // Arrange
+            var transaction = new Transaction { Note = "Test Transaction", Amount = 50 };
+
+            // Add transaction to database
+            transactionBusiness.Add(transaction);
+
+            // Act
+            transactionBusiness.Delete(transaction.Id);
+
+            // Assert
+            using (var context = new Context())
+            {
+                var deletedTransaction = context.Transactions.FirstOrDefault(t => t.Id == transaction.Id);
+                Assert.IsNull(deletedTransaction, "Transaction was not deleted from database");
+            }
+        }
+
     }
 }
