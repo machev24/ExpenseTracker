@@ -5,43 +5,46 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<br />
+<br />
 
-<h4>Transaction</h4>
-<hr />
-<div class="row">
+<h1 class="one">Create new transaction</h1>
+
+<br />
+<div class="row1">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Transaction.Category" class="control-label"></label>
-                <input asp-for="Transaction.Category" class="form-control" />
+                <input asp-for="Transaction.Category" class="form-control" placeholder="Category"/>
                 <span asp-validation-for="Transaction.Category" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Transaction.Amount" class="control-label"></label>
-                <input asp-for="Transaction.Amount" class="form-control" />
+                <input asp-for="Transaction.Amount" class="form-control" placeholder="Amount" />
                 <span asp-validation-for="Transaction.Amount" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Transaction.Note" class="control-label"></label>
-                <input asp-for="Transaction.Note" class="form-control" />
+                <input asp-for="Transaction.Note" class="form-control" placeholder="Note" />
                 <span asp-validation-for="Transaction.Note" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <label asp-for="Transaction.Date" class="control-label"></label>
-                <input asp-for="Transaction.Date" class="form-control" />
+                <input asp-for="Transaction.Date" class="form-control" placeholder="Date" />
                 <span asp-validation-for="Transaction.Date" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <br />
+            <div class="form-group1">
+                <input type="submit" value="Create" class="btn" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
+<br />
+<div class="hp">
+    <a class="hp1" asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

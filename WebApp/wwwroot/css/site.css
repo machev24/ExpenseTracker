@@ -48,7 +48,7 @@ body {
     text-align: center;
 }
 
-.row{
+.row1 {
     display: flex;
     justify-content: center;
 }
@@ -115,3 +115,7 @@ body {
         background: #eee;
         color: #28282B;
     }
+
+.text1{
+    color: white;
+}
