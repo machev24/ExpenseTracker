@@ -19,7 +19,7 @@ namespace Data.Tests.Models
             Assert.That(Attribute.IsDefined(idProperty, typeof(KeyAttribute)));
         }
         [Test]
-        public void Category_Title_Should_Be_Settable_And_Gettable()
+        public void CategoryTitleShouldBeSettableAndGettable()
         {
             // Arrange
             var category = new Category();
