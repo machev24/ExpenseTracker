@@ -17,7 +17,12 @@ namespace Tests
             var transaction = new Transaction { Category = 2 };
             Assert.AreEqual(2, transaction.Category);
         }
-
+        [Test]
+        public void TestTransactionAmount()
+        {
+            var transaction = new Transaction { Amount = 20.5m };
+            Assert.AreEqual(20.5m, transaction.Amount);
+        }
 
     }
 }
