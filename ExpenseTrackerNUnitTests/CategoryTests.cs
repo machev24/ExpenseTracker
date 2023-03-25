@@ -31,6 +31,19 @@ namespace Data.Tests.Models
             // Assert
             Assert.AreEqual(expectedTitle, category.Title);
         }
+        [Test]
+        public void CategoryIconShouldBeSettableAndGettable()
+        {
+            // Arrange
+            var category = new Category();
+            var expectedIcon = "fa fa-car";
+
+            // Act
+            category.Icon = expectedIcon;
+
+            // Assert
+            Assert.AreEqual(expectedIcon, category.Icon);
+        }
     }
 }
 
