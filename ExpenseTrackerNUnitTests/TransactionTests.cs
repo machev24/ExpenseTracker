@@ -29,5 +29,11 @@ namespace Tests
             var transaction = new Transaction { Note = "Test note" };
             Assert.AreEqual("Test note", transaction.Note);
         }
+        [Test]
+        public void TestTransactionDate()
+        {
+            var transaction = new Transaction { Date = new DateTime(2022, 3, 25) };
+            Assert.AreEqual(new DateTime(2022, 3, 25), transaction.Date);
+        }
     }
 }
