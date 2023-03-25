@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System.ComponentModel.DataAnnotations;
 
-namespace Data.Tests.Models
+namespace Tests
 {
     public class CategoryTests
     {
