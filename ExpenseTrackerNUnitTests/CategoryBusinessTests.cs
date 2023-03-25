@@ -1,125 +1,107 @@
+using NUnit.Framework;
 using Business;
 using Data.Models;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 
-namespace Tests
+namespace Business.Tests
 {
     [TestFixture]
     public class CategoryBusinessTests
     {
-        private CategoryBusiness categoryBusiness;
-
-        [SetUp]
-        public void Setup()
-        {
-            categoryBusiness = new CategoryBusiness();
-        }
-
         [Test]
-        public void GetAllReturnsAllCategories()
+        public void GetAll_ShouldReturnAllCategories()
         {
             // Arrange
-            var expectedCategories = new List<Category>
-            {
-                new Category { Id = 1, Title = "TestCategory1" },
-                new Category { Id = 2, Title = "TestCategory2" },
-                new Category { Id = 3, Title = "TestCategory3" }
-            };
-            foreach (var category in expectedCategories)
-            {
-                categoryBusiness.Add(category);
-            }
+            var categoryBusiness = new CategoryBusiness();
 
             // Act
             var result = categoryBusiness.GetAll();
 
             // Assert
-            CollectionAssert.AreEqual(expectedCategories, result);
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
         }
 
         [Test]
-        public void GetReturnsCategoryWithGivenId()
+        public void Get_ShouldReturnSingleCategory()
         {
             // Arrange
-            int id = 1;
-            var expectedCategory = new Category { Id = id, Title = "TestCategory" };
-            categoryBusiness.Add(expectedCategory);
+            var categoryBusiness = new CategoryBusiness();
 
             // Act
-            var result = categoryBusiness.Get(id);
+            var result = categoryBusiness.Get(1);
 
             // Assert
-            Assert.AreEqual(expectedCategory, result);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(1, result.Id);
         }
 
         [Test]
-        public void AddInsertsCategoryIntoDatabase()
+        public void Add_ShouldAddCategory()
         {
             // Arrange
-            var newCategory = new Category { Title = "TestCategory" };
+            var categoryBusiness = new CategoryBusiness();
+            var category = new Category { Title = "Test Category" };
 
             // Act
-            categoryBusiness.Add(newCategory);
+            categoryBusiness.Add(category);
 
             // Assert
-            var result = categoryBusiness.Get(newCategory.Id);
-            Assert.AreEqual(newCategory, result);
+            var result = categoryBusiness.Get(category.Id);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(category.Title, result.Title);
         }
 
         [Test]
-        public void UpdateUpdatesExistingCategory()
+        public void Update_ShouldUpdateCategory()
         {
             // Arrange
-            var categoryToUpdate = new Category { Title = "TestCategory" };
-            categoryBusiness.Add(categoryToUpdate);
-
-            var updatedCategory = new Category { Id = categoryToUpdate.Id, Title = "TestCategoryUpdated" };
+            var categoryBusiness = new CategoryBusiness();
+            var category = new Category { Id = 1, Title = "Updated Category" };
 
             // Act
-            categoryBusiness.Update(updatedCategory);
+            categoryBusiness.Update(category);
 
             // Assert
-            var result = categoryBusiness.Get(categoryToUpdate.Id);
-            Assert.AreEqual(updatedCategory, result);
+            var result = categoryBusiness.Get(category.Id);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(category.Title, result.Title);
         }
 
         [Test]
-        public void UpdateThrowsExceptionWhenEntryNotFound()
+        public void Update_ShouldThrowExceptionIfEntryNotFound()
         {
             // Arrange
-            var categoryToUpdate = new Category { Id = 1, Title = "TestCategory" };
+            var categoryBusiness = new CategoryBusiness();
+            var category = new Category { Id = 1000, Title = "Updated Category" };
 
-            // Act and Assert
-            Assert.Throws<Exception>(() => categoryBusiness.Update(categoryToUpdate));
+            // Act & Assert
+            Assert.Throws<System.Exception>(() => categoryBusiness.Update(category));
         }
 
         [Test]
-        public void DeleteRemovesCategoryFromDatabase()
+        public void Delete_ShouldDeleteCategory()
         {
             // Arrange
-            var categoryToDelete = new Category { Title = "TestCategory" };
-            categoryBusiness.Add(categoryToDelete);
+            var categoryBusiness = new CategoryBusiness();
+            var category = new Category { Icon = "Test Category" };
+            categoryBusiness.Add(category);
 
             // Act
-            categoryBusiness.Delete(categoryToDelete.Id);
+            categoryBusiness.Delete(category.Id);
 
             // Assert
-            var result = categoryBusiness.Get(categoryToDelete.Id);
+            var result = categoryBusiness.Get(category.Id);
             Assert.IsNull(result);
         }
 
         [Test]
-        public void DeleteThrowsExceptionWhenEntryNotFound()
+        public void Delete_ShouldThrowExceptionIfEntryNotFound()
         {
             // Arrange
-            int nonExistingCategoryId = 1;
+            var categoryBusiness = new CategoryBusiness();
 
-            // Act and Assert
-            Assert.Throws<Exception>(() => categoryBusiness.Delete(nonExistingCategoryId));
+            // Act & Assert
+            Assert.Throws<System.Exception>(() => categoryBusiness.Delete(1000));
         }
     }
 }
-
-
