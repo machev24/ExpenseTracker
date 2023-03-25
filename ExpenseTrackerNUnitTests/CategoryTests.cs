@@ -44,6 +44,19 @@ namespace Data.Tests.Models
             // Assert
             Assert.AreEqual(expectedIcon, category.Icon);
         }
+        [Test]
+        public void CategoryTypeShouldBeSettableAndGettable()
+        {
+            // Arrange
+            var category = new Category();
+            var expectedType = "expense";
+
+            // Act
+            category.Type = expectedType;
+
+            // Assert
+            Assert.AreEqual(expectedType, category.Type);
+        }
     }
 }
 
