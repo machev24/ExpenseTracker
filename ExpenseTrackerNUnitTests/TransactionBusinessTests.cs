@@ -18,7 +18,7 @@ namespace Tests
         }
 
         [Test]
-        public void GetAll_ReturnsListOfTransactions()
+        public void GetAllReturnsListOfTransactions()
         {
             // Arrange
 
@@ -30,7 +30,7 @@ namespace Tests
         }
 
         [Test]
-        public void Get_WithInvalidId_ReturnsNull()
+        public void GetWithInvalidId_ReturnsNull()
         {
             // Arrange
             int invalidId = -1;
@@ -42,7 +42,7 @@ namespace Tests
             Assert.IsNull(actualTransaction);
         }
         [Test]
-        public void Add_AddsTransactionToDatabase()
+        public void AddAddsTransactionToDatabase()
         {
             // Arrange
             var transaction = new Transaction { Note = "Test Transaction", Amount = 100 };
@@ -59,7 +59,7 @@ namespace Tests
             }
         }
         [Test]
-        public void Update_WithInvalidTransaction_ThrowsException()
+        public void UpdateWithInvalidTransaction_ThrowsException()
         {
             // Arrange
             Transaction invalidTransaction = new Transaction
@@ -76,7 +76,7 @@ namespace Tests
         }
 
         [Test]
-        public void Delete_DeletesTransactionFromDatabase()
+        public void DeleteDeletesTransactionFromDatabase()
         {
             // Arrange
             var transaction = new Transaction { Note = "Test Transaction", Amount = 50 };
@@ -95,7 +95,7 @@ namespace Tests
             }
         }
         [Test]
-        public void Delete_ThrowsExceptionIfTransactionNotFound()
+        public void DeleteThrowsExceptionIfTransactionNotFound()
         {
             // Arrange
             var invalidId = -1;

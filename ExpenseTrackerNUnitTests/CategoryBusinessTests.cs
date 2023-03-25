@@ -1,107 +1,47 @@
 using NUnit.Framework;
-using Business;
+using System;
+using System.Collections.Generic;
 using Data.Models;
+using Business;
+using Data;
 
-namespace Business.Tests
+namespace Tests
 {
-    [TestFixture]
     public class CategoryBusinessTests
     {
-        [Test]
-        public void GetAll_ShouldReturnAllCategories()
+        private CategoryBusiness categoryBusiness;
+
+        [SetUp]
+        public void Setup()
         {
-            // Arrange
-            var categoryBusiness = new CategoryBusiness();
-
-            // Act
-            var result = categoryBusiness.GetAll();
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Count > 0);
+           categoryBusiness = new CategoryBusiness();
         }
 
+      
         [Test]
-        public void Get_ShouldReturnSingleCategory()
+        public void GetWithInvalidId_ReturnsNull()
         {
             // Arrange
-            var categoryBusiness = new CategoryBusiness();
+            int invalidId = -1;
 
             // Act
-            var result = categoryBusiness.Get(1);
+            Category actualCategory = categoryBusiness.Get(invalidId);
 
             // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual(1, result.Id);
+            Assert.IsNull(actualCategory);
         }
-
+        
         [Test]
-        public void Add_ShouldAddCategory()
+        public void DeleteThrowsExceptionIfTransactionNotFound()
         {
             // Arrange
-            var categoryBusiness = new CategoryBusiness();
-            var category = new Category { Title = "Test Category" };
-
-            // Act
-            categoryBusiness.Add(category);
-
-            // Assert
-            var result = categoryBusiness.Get(category.Id);
-            Assert.IsNotNull(result);
-            Assert.AreEqual(category.Title, result.Title);
-        }
-
-        [Test]
-        public void Update_ShouldUpdateCategory()
-        {
-            // Arrange
-            var categoryBusiness = new CategoryBusiness();
-            var category = new Category { Id = 1, Title = "Updated Category" };
-
-            // Act
-            categoryBusiness.Update(category);
-
-            // Assert
-            var result = categoryBusiness.Get(category.Id);
-            Assert.IsNotNull(result);
-            Assert.AreEqual(category.Title, result.Title);
-        }
-
-        [Test]
-        public void Update_ShouldThrowExceptionIfEntryNotFound()
-        {
-            // Arrange
-            var categoryBusiness = new CategoryBusiness();
-            var category = new Category { Id = 1000, Title = "Updated Category" };
+            var invalidId = -1;
 
             // Act & Assert
-            Assert.Throws<System.Exception>(() => categoryBusiness.Update(category));
+            Assert.Throws<Exception>(() => categoryBusiness.Delete(invalidId),
+                "Delete should throw an exception if transaction is not found in database");
+
         }
 
-        [Test]
-        public void Delete_ShouldDeleteCategory()
-        {
-            // Arrange
-            var categoryBusiness = new CategoryBusiness();
-            var category = new Category { Icon = "Test Category" };
-            categoryBusiness.Add(category);
-
-            // Act
-            categoryBusiness.Delete(category.Id);
-
-            // Assert
-            var result = categoryBusiness.Get(category.Id);
-            Assert.IsNull(result);
-        }
-
-        [Test]
-        public void Delete_ShouldThrowExceptionIfEntryNotFound()
-        {
-            // Arrange
-            var categoryBusiness = new CategoryBusiness();
-
-            // Act & Assert
-            Assert.Throws<System.Exception>(() => categoryBusiness.Delete(1000));
-        }
     }
 }

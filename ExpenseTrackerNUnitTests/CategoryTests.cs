@@ -7,7 +7,7 @@ namespace Tests
     public class CategoryTests
     {
         [Test]
-        public void Category_Id_Should_Have_KeyAttribute()
+        public void CategoryIdShouldHaveKeyAttribute()
         {
             // Arrange
             var category = new Category();
