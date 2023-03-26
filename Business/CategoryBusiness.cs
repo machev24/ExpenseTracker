@@ -19,7 +19,7 @@ namespace Business
         /// <returns> Categories Collections </returns>
         public List<Category> GetAll()
         {
-            using (var context = new Context())
+            using (categoryContext = new Context())
             {
                 return categoryContext.Categories.ToList();
             }
@@ -46,7 +46,9 @@ namespace Business
         {
             using (categoryContext = new Context())
             {
+                //Add Category
                 categoryContext.Categories.Add(category);
+                //Save Changes to Database
                 categoryContext.SaveChanges();
             }
 
@@ -64,7 +66,9 @@ namespace Business
                 var oldCategories = categoryContext.Categories.Find(category.Id);
                 if (oldCategories != null)
                 {
+                    //Update Category Values
                     categoryContext.Entry(oldCategories).CurrentValues.SetValues(category);
+                    //Save Changes to Database
                     categoryContext.SaveChanges();
                 }
                 else
@@ -87,7 +91,9 @@ namespace Business
 
                 if (category != null)
                 {
+                    //Delete Category
                     categoryContext.Categories.Remove(category);
+                    //Save Changes to Database
                     categoryContext.SaveChanges();
                 }
                 else
