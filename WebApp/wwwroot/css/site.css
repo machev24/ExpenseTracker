@@ -51,6 +51,12 @@ body {
 .row1 {
     display: flex;
     justify-content: center;
+    margin: auto;
+    padding: 1% 2%;
+    max-width: 1440px;
+    border-radius: 5px;
+    background: #616062;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0, .3);
 }
 
 .hp {
@@ -116,3 +122,17 @@ body {
         color: #28282B;
     }
 
+.d {
+    display: flex;
+    justify-content: center;
+}
+
+.table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.tr:hover {
+    background: #616062;
+    color: #000000;
+}

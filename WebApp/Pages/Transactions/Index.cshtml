@@ -5,11 +5,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="one">Transactions collection</h1>
 
-<p>
+<p class="one">
     <a class="hp1" asp-page="Create">Create new transaction</a>
 </p>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -25,12 +26,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Transaction[0].Date)
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Transaction) {
-        <tr>
+        <tr class="tr">
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
             </td>

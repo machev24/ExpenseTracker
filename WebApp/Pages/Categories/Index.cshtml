@@ -5,11 +5,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="one">Categories collection</h1>
 
-<p>
+<p class="one">
     <a class="hp1" asp-page="Create">Create new category</a>
 </p>
+<br />
+
 <table class="table">
     <thead>
         <tr>
@@ -22,12 +24,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category[0].Type)
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Category) {
-        <tr>
+        <tr class="tr">
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>

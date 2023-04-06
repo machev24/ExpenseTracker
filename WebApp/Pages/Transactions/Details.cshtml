@@ -5,11 +5,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="one">Details for transaction</h1>
+<br />
 
-<div>
-    <h4>Transaction</h4>
-    <hr />
+<div class="row1">
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Transaction.Category)
@@ -37,7 +36,9 @@
         </dd>
     </dl>
 </div>
-<div>
+<br />
+
+<div class="d">
     <a class="hp1" asp-page="./Edit" asp-route-id="@Model.Transaction?.Id">Edit</a> |
     <a class="hp1" asp-page="./Index">Back to List</a>
 </div>
