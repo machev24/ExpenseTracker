@@ -5,38 +5,70 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row3">
-    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+<h1 class="one">Welcome to your personal expense tracker!</h1>
 
-    <script class="two">
-        var xValues1 = 
-        var yValues1 = 
+<iframe class="calendar" src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23616161&ctz=Europe%2FSofia&hl=en_GB&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=Mzk5ZTdmZTNjNmIwMjNjNTRmZWQ1ZDdkOTM1NWM5MWNlNWEwZTM5YmUxOWQ2MmE1OTViMWE0MjBiNmNjZjIxYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457" style="border:solid 1px #777" width="400" height="300" frameborder="0" scrolling="no"></iframe>
 
-        var barColors = [
-            "#088F8F",
-            "#50C878",
-            "#FDDA0D",
-            "#D27D2D",
-            "#6495ED",
-            "#D22B2B",
-            "#DE3163"
-        ];
+<br />
 
-        new Chart("myChart1", {
-            type: "pie",
-            data: {
-                labels: xValues1,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues1
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: "Expense By Category"
-                }
-            }
-        });
-    </script>
+<div class="row4">
+    <dl class="l">
+        <dt>
+            Most common expense categories
+        </dt>
+        <hr />
+        <dd>
+            1) Travel
+        </dd>
+        <dd>
+            2) Education
+        </dd>
+        <dd>
+            3) Health care
+        </dd>
+        <dd>
+            4) Grocery
+        </dd>
+        <dd>
+            5) Eating outside
+        </dd>
+        <dd>
+            6) Entertainment
+        </dd>
+        <dd>
+            7) Garments
+        </dd>
+    </dl>
+</div>
+
+<br />
+
+<div class="row5">
+    <dl class="l1">
+        <dt>
+            Most common income categories
+        </dt>
+        <hr />
+        <dd>
+            1) Salary
+        </dd>
+        <dd>
+            2) Commission
+        </dd>
+        <dd>
+            3) Interest
+        </dd>
+        <dd>
+            4) Investments
+        </dd>
+        <dd>
+            5) Allowance
+        </dd>
+        <dd>
+            6) Government payments
+        </dd>
+        <dd>
+            7) Gifts
+        </dd>
+    </dl>
 </div>
