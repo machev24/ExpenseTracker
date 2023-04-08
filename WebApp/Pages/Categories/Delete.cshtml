@@ -37,13 +37,11 @@
             </dd>
         </dl>
     </div>
-
-    <div class="form-group1">
-        <input type="submit" value="Delete" class="btn" />
-    </div>
     
     <form method="post" class="hp">
-        <br />
+        <div class="form-group1">
+            <input type="submit" value="Delete" class="btn" />
+        </div>
         <input type="hidden" asp-for="Category.Id" />
         <a class="hp1" asp-page="./Index">Back to List</a>
     </form>
